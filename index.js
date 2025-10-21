@@ -21,7 +21,7 @@ db.connect(err => {
 });
 
 app.get('/customers', (req, res) => {
-  db.query('SELECT * FROM customers  limit 3' , (err, results) => {
+  db.query('SELECT * FROM customers  limit 5' , (err, results) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
